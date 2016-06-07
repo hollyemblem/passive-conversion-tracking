@@ -6,7 +6,9 @@
             $('.cta').addClass('onScreen');
             var $callToAction = document.querySelector("a.cta.onScreen").getAttribute("href");
             onScreen = true;
-            ga('send', 'event', 'CTA', 'Visible', $callToAction);
+            ga('send', 'event', 'CTA', 'Visible', $callToAction,{
+  nonInteraction: true
+});
         } else {}
     });
 })(jQuery);
